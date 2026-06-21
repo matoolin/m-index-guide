@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>产品说明 · 欧博</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f2f9fc;
+            color: #1a3033;
+            line-height: 1.6;
+            padding: 0 1rem 3rem;
+        }
+        .page {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* header / hero */
+        .hero {
+            padding: 3rem 0 2rem;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #0b4b4e;
+            margin-bottom: 0.6rem;
+        }
+        .hero .subhead {
+            font-size: 1.05rem;
+            color: #2b6f72;
+            background: #d9efeb;
+            display: inline-block;
+            padding: 0.3rem 1.2rem;
+            border-radius: 30px;
+            font-weight: 400;
+        }
+
+        /* 卡片网格 */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+        }
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.6rem 1.4rem;
+            box-shadow: 0 6px 14px rgba(8, 76, 78, 0.06);
+            border: 1px solid #d4e8e4;
+            transition: all 0.2s;
+        }
+        .card:hover {
+            border-color: #6eb0ab;
+            box-shadow: 0 10px 20px rgba(15, 95, 90, 0.08);
+        }
+        .card h3 {
+            font-size: 1.2rem;
+            color: #0b5b5a;
+            margin-bottom: 0.7rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+        .card h3::before {
+            content: "◈";
+            color: #2f9b93;
+            font-size: 1.1rem;
+            margin-right: 0.2rem;
+        }
+        .card p {
+            color: #2c4849;
+            font-size: 0.95rem;
+            margin: 0.4rem 0;
+        }
+
+        /* 摘要 + 使用 */
+        .summary-block {
+            background: #e2f3f0;
+            border-radius: 28px;
+            padding: 2rem 2rem 1.8rem;
+            margin: 2.8rem 0;
+        }
+        .summary-block h2 {
+            font-size: 1.4rem;
+            color: #0f5556;
+            font-weight: 500;
+            border-left: 5px solid #338f86;
+            padding-left: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        .summary-block p {
+            color: #1f4344;
+            margin-bottom: 1rem;
+        }
+        .summary-block .highlight {
+            background: white;
+            padding: 1rem 1.3rem;
+            border-radius: 16px;
+            font-weight: 450;
+            color: #0a4746;
+            border: 1px solid #b6d3ce;
+        }
+
+        /* 场景 */
+        .scene-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .scene-item {
+            background: #ffffffd9;
+            backdrop-filter: blur(2px);
+            border: 1px solid #bee0d9;
+            border-radius: 50px;
+            padding: 0.55rem 1.3rem;
+            font-size: 0.9rem;
+            color: #1f5e5b;
+        }
+        .scene-item::before {
+            content: "▹ ";
+            color: #37968b;
+        }
+
+        /* 提示 / FAQ 摘要 */
+        .tip-area {
+            background: white;
+            border-radius: 24px;
+            padding: 1.8rem 1.8rem 1.5rem;
+            margin: 2.5rem 0;
+            border: 1px solid #cce4df;
+        }
+        .tip-area h3 {
+            color: #125b58;
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 1.2rem;
+        }
+        .faq-mini {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+        }
+        .faq-mini dt {
+            font-weight: 500;
+            color: #1f6361;
+            font-size: 0.95rem;
+            border-left: 3px solid #46a094;
+            padding-left: 0.8rem;
+        }
+        .faq-mini dd {
+            margin-left: 1.3rem;
+            color: #39585a;
+            font-size: 0.9rem;
+        }
+
+        /* 链接样式 */
+        a {
+            color: #007f7a;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1.5px dotted #7ebdb5;
+            transition: border 0.15s;
+        }
+        a:hover {
+            border-bottom: 2px solid #00645c;
+            color: #025f59;
+        }
+        .link-sentence {
+            background: #ffffffd9;
+            padding: 1rem 1.5rem;
+            border-radius: 40px;
+            display: inline-block;
+            margin: 0.3rem 0 1rem;
+            border: 1px solid #c1ded7;
+            font-size: 0.95rem;
+        }
+
+        /* 页脚 */
+        .footer-note {
+            margin-top: 3rem;
+            font-size: 0.8rem;
+            color: #567b78;
+            text-align: center;
+            border-top: 1px solid #c8dfda;
+            padding-top: 1.8rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 1.7rem; }
+            .card { padding: 1.3rem 1rem; }
+            .summary-block { padding: 1.5rem 1.2rem; }
+            .scene-item { font-size: 0.85rem; padding: 0.4rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- hero -->
+    <header class="hero">
+        <h1>欧博 · 查询与对照</h1>
+        <div class="subhead">日常索引 · 延伸阅读</div>
+    </header>
+
+    <!-- 摘要说明 -->
+    <section class="summary-block">
+        <h2>页面定位</h2>
+        <p>这是一份围绕 <a href="https://m-index-oubo.com">欧博</a> 整理的产品式说明页，主要服务于需要快速检索、对照条目以及进行延伸查阅的用户。内容从日常使用场景出发，不做过度包装，仅陈列事实性结构与提示。</p>
+        <div class="highlight">
+            ◈ 适合在需要比对字段、确认顺序、或查找简要说明时作为辅助参考。
+        </div>
+    </section>
+
+    <!-- 特点卡片网格 -->
+    <div class="grid">
+        <div class="card">
+            <h3>条目结构化</h3>
+            <p>分类与索引清晰，减少反复翻找。每个模块按逻辑分组，方便对照查阅。</p>
+        </div>
+        <div class="card">
+            <h3>轻量说明</h3>
+            <p>避免冗余描述，只保留关键解释。适合快速浏览，也适合屏幕阅读辅助。</p>
+        </div>
+        <div class="card">
+            <h3>延伸入口</h3>
+            <p>除了基础展示，也可作为跳转至 <a href="https://m-index-oubo.com">欧博</a> 的稳定通路，便于进一步查看完整内容。</p>
+        </div>
+    </div>
+
+    <!-- 使用建议 + 场景 -->
+    <div style="margin: 1rem 0 2rem;">
+        <h2 style="font-size: 1.3rem; font-weight: 450; color: #145553; letter-spacing: 0.01em;">使用建议</h2>
+        <p style="color: #2b5855;">建议搭配浏览器自带查找功能 (Ctrl+F / Cmd+F) 快速定位字段。若需要更详细的分类或更新索引，可直接通过下方链接前往。日常使用中，可将其视为一个静态的、可信任的查询起点。</p>
+    </div>
+
+    <div class="scene-list">
+        <span class="scene-item">核对条目顺序</span>
+        <span class="scene-item">快速定位说明段落</span>
+        <span class="scene-item">辅助阅读时对照缩写</span>
+        <span class="scene-item">延伸查找相关资源</span>
+        <span class="scene-item">移动端轻量浏览</span>
+    </div>
+
+    <!-- FAQ 摘要 (自然嵌入链接) -->
+    <div class="tip-area">
+        <h3>常见简要说明</h3>
+        <dl class="faq-mini">
+            <dt>页面内容会频繁变动吗？</dt>
+            <dd>本页为静态说明，不自动刷新。如需检查最新整理，建议定期通过 <a href="https://m-index-oubo.com">欧博</a> 确认。</dd>
+            <dt>是否包含外部链接？</dt>
+            <dd>主要引用均指向本站域内，不收集隐私信息，仅提供索引功能。</dd>
+            <dt>移动端显示是否正常？</dt>
+            <dd>采用响应式网格与自适应字号，在手机与平板设备上均可获得清晰阅读体验。</dd>
+        </dl>
+    </div>
+
+    <!-- 可信但克制的访问说明 -->
+    <div style="background: #dff0ec; border-radius: 40px; padding: 1.3rem 1.5rem; margin: 2rem 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1rem;">
+        <span style="font-weight: 450; color: #13605b;">📌 访问说明</span>
+        <span style="color: #295e5b;">本页为产品式介绍，不含自动跳转与第三方资源。所有内容仅用于信息对照，如需完整索引，请直接前往</span>
+        <a href="https://m-index-oubo.com" style="border-bottom: 1.5px solid #468f86; background: white; padding: 0.1rem 0.6rem; border-radius: 20px;">欧博</a>
+        <span style="color: #295e5b;">阅读原始页面。</span>
+    </div>
+
+    <!-- 再次自然嵌入链接的句子（不同位置） -->
+    <p style="margin: 1.8rem 0 0.8rem; background: white; padding: 1rem 1.5rem; border-radius: 80px 20px 20px 80px; border-left: 6px solid #3b9b90; color: #1f494a;">
+        若需要每日对照、字段查询或扩展阅读，可将 <a href="https://m-index-oubo.com">欧博</a> 加入书签，作为稳定访问入口。
+    </p>
+
+    <!-- 页脚 -->
+    <div class="footer-note">
+        <span>内容整理于静态说明 · 仅作索引参考</span><br>
+        <span style="opacity: 0.7;">无诱导表述 · 无自动采集</span>
+    </div>
+</div>
+</body>
+</html>
