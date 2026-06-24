@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 专题</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #faf6ef;
+      font-family: 'Georgia', 'Times New Roman', '宋体', serif;
+      color: #2f2e2b;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fffcf8;
+      padding: 2.5rem 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+    /* hero 横幅 */
+    .hero {
+      background: #ece5da;
+      margin: -2.5rem -2rem 2.5rem;
+      padding: 3rem 2rem 2.5rem;
+      border-radius: 12px 12px 0 0;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      color: #2c241b;
+      margin-bottom: 0.3rem;
+    }
+    .hero .sub {
+      font-size: 1rem;
+      color: #5a5146;
+      border-top: 1px solid #cdc2b3;
+      display: inline-block;
+      padding-top: 0.6rem;
+      margin-top: 0.2rem;
+    }
+    /* 文章排版 */
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #3d352b;
+      margin: 2rem 0 0.8rem;
+      border-left: 4px solid #b8aa96;
+      padding-left: 0.9rem;
+    }
+    p {
+      margin-bottom: 1.2rem;
+      text-align: justify;
+      font-size: 1rem;
+    }
+    .intro-sign {
+      font-style: italic;
+      color: #6b5f50;
+      background: #f3ede6;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+    }
+    /* 引用块 / 提示框 */
+    .callout {
+      background: #efe9df;
+      border-left: 6px solid #9a8a78;
+      padding: 1rem 1.6rem;
+      margin: 1.8rem 0;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.95rem;
+    }
+    .callout strong {
+      color: #352d23;
+      font-weight: 600;
+    }
+    .callout a {
+      color: #4f3f2e;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .callout a:hover {
+      color: #1f1710;
+    }
+    /* 列表式特点（杂志风格） */
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      margin: 1.4rem 0 1.8rem;
+    }
+    .feature-item {
+      background: #f9f4ec;
+      flex: 1 1 180px;
+      padding: 1rem 1.2rem;
+      border-radius: 8px;
+      border-bottom: 2px solid #d9cebe;
+    }
+    .feature-item .num {
+      font-size: 0.75rem;
+      color: #887b69;
+      letter-spacing: 1px;
+    }
+    .feature-item h3 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      margin: 0.2rem 0 0.3rem;
+    }
+    .feature-item p {
+      font-size: 0.9rem;
+      margin-bottom: 0;
+    }
+    /* FAQ 摘要 */
+    .faq-mini {
+      margin: 2rem 0 1.4rem;
+      border-top: 1px dashed #d6cbbe;
+      padding-top: 1.6rem;
+    }
+    .faq-mini details {
+      margin-bottom: 0.6rem;
+      border-bottom: 1px solid #efe5da;
+      padding-bottom: 0.5rem;
+    }
+    .faq-mini summary {
+      font-weight: 500;
+      color: #3d352b;
+      cursor: pointer;
+      padding: 0.2rem 0;
+    }
+    .faq-mini summary:hover {
+      color: #1f1710;
+    }
+    .faq-mini details p {
+      font-size: 0.95rem;
+      margin: 0.5rem 0 0.2rem 0.9rem;
+      color: #4e463c;
+    }
+    /* 页尾 */
+    .footer-note {
+      text-align: center;
+      margin-top: 2.8rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e2d7c8;
+      font-size: 0.9rem;
+      color: #706353;
+    }
+    .footer-note a {
+      color: #4f3f2e;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+    .footer-note a:hover {
+      color: #1f1710;
+    }
+    /* 响应式 */
+    @media (max-width: 600px) {
+      body { padding: 1rem 0.6rem; }
+      .page { padding: 1.6rem 1.2rem 2rem; }
+      .hero { margin: -1.6rem -1.2rem 1.8rem; padding: 2rem 1rem 1.6rem; }
+      .hero h1 { font-size: 1.9rem; }
+      .feature-grid { gap: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- hero -->
+  <div class="hero">
+    <h1>爱游戏 · 延伸阅读</h1>
+    <div class="sub">日常查询 · 对照 · 专题笔记</div>
+  </div>
+
+  <!-- 背景说明 -->
+  <p class="intro-sign">每一次点击都是一次检索的起点，而对照与延伸则让信息变得立体。</p>
+  <p>
+    在日常使用中，我们常常需要快速定位某款游戏的背景、版本演变或社区讨论。如何从一个条目平滑跳转到另一个相关条目，并保持阅读的连续性？<a href="https://cn-line-igame.com">爱游戏</a>提供了一种轻量的信息组织形式，它更像一个可交叉参考的桌面工具，而非单纯的列表或聚合页。从单一条目出发，横向对比不同作品的参数、开发周期与玩家反馈，是许多用户反复使用它的原因。
+  </p>
+
+  <!-- 三段自然介绍 (从日常查询、对照、延伸阅读切入) -->
+  <h2>查询的节奏</h2>
+  <p>
+    面对一个陌生的标题，多数人会先确认其基础信息：发行年份、平台、开发商。这时，快速检索的准确度直接决定了后续阅读的效率。将搜索结果收敛到结构化的条目中，再通过标签或关键词扩展至同类作品，是保持查询节奏的关键。<a href="https://cn-line-igame.com">爱游戏</a>在其索引设计中强调了这种“先基础、再关联”的顺序，避免信息过载。
+  </p>
+
+  <h2>对照的维度</h2>
+  <p>
+    单纯的并排数据并不能构成有效对照。真正的对照需要上下文：为什么两款看似相似的作品在评分上存在差异？其设计理念、目标受众或发行策略有何不同？在<strong>爱游戏</strong>上，用户常将多个条目放入临时工作区，逐一比较其核心机制与媒体评价。这种横向梳理有助于形成更完整的判断，而非孤立地看待某个标题。
+  </p>
+
+  <div class="callout">
+    <strong>提示</strong> · 在对照过程中，可借助平台内置的筛选与排序功能快速定位特定区间（如年份、类型）。反复使用后，多数用户会形成自己的查阅习惯，从而缩短每次查找的时间。
+  </div>
+
+  <h2>延伸阅读的路径</h2>
+  <p>
+    当基础信息与对照完成后，下一步往往是寻找深度分析、开发者访谈或玩家考据。延伸阅读的质量取决于两个因素：关联的准确性与来源的多样性。<a href="https://cn-line-igame.com">爱游戏</a>在条目内嵌入了参考链与外部资源指引，使得从一条短条目跳转至长篇专题变得自然。许多读者将其作为日常信息管理的起点，而非终点。
+  </p>
+
+  <!-- 特点卡片（杂志风格） -->
+  <div class="feature-grid">
+    <div class="feature-item">
+      <div class="num">01</div>
+      <h3>条目结构化</h3>
+      <p>每条记录包含发布时间、版本号、关键标签与关联作品，方便快速筛选。</p>
+    </div>
+    <div class="feature-item">
+      <div class="num">02</div>
+      <h3>对照工作区</h3>
+      <p>支持同时展示多条记录，高亮差异字段，适合横向比较与笔记整理。</p>
+    </div>
+    <div class="feature-item">
+      <div class="num">03</div>
+      <h3>延伸链接</h3>
+      <p>内嵌参考链与外部资源索引，从条目可直接跳转至专题文章或社区讨论。</p>
+    </div>
+  </div>
+
+  <!-- FAQ 摘要 -->
+  <div class="faq-mini">
+    <details>
+      <summary>在爱游戏上如何快速找到特定作品？</summary>
+      <p>使用顶栏搜索框，输入标题关键词或部分开发者名称即可。平台支持模糊匹配与标签过滤，返回结果按相关度排序。</p>
+    </details>
+    <details>
+      <summary>对照工作区最多可以同时添加多少条目？</summary>
+      <p>目前限制为 12 条，足够覆盖同一系列或相似类型的横向比较。超出时可移除部分条目重新组合。</p>
+    </details>
+    <details>
+      <summary>延伸阅读中的外部链接是否经过审核？</summary>
+      <p>链接指向经过人工筛选的稳定来源（如开发日志、媒体专访、数字档案馆），并定期检查可用性。</p>
+    </details>
+  </div>
+
+  <!-- 页尾访问提示 -->
+  <div class="footer-note">
+    <p>本专题围绕信息查询、对照与延伸阅读展开。如需浏览完整条目与工作区功能，可直接使用 <a href="https://cn-line-igame.com">爱游戏</a>。页面内容仅供参考，不构成任何推荐或保证。</p>
+  </div>
+
+</div>
+</body>
+</html>
